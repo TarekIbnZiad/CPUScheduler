@@ -1,0 +1,102 @@
+/*
+ * Process.cs contains a class called Process which includes all
+   the needed members of a process and its methods
+ * Developed by >> Mohamed Tarek Ibn Ziad , Sprig 2013 
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace CPU_Scheduling
+{
+    class Process
+    {
+        public int pID;
+        
+        public int PID
+        {
+            get { return pID; }
+            set { pID = value; }
+        }
+
+        private int arrivalTime;
+
+        public int ArrivalTime
+        {
+            get { return arrivalTime; }
+            set { arrivalTime = value; }
+        }
+
+        private int priority;
+
+        public int Priority
+        {
+            get { return priority; }
+            set { priority = value; }
+        }
+
+        private int burst;
+
+        public int Burst
+        {
+            get { return burst; }
+            set { burst = value; }
+        }
+
+        private float waitingTime;
+
+        public float WaitingTime
+        {
+            get { return waitingTime; }
+            set { waitingTime = value; }
+        }
+
+        private float turnaroundTime;
+
+        public float TurnaroundTime
+        {
+            get { return turnaroundTime; }
+            set { turnaroundTime = value; }
+        }
+
+        private bool isDone;
+
+        public bool IsDone
+        {
+            get { return isDone; }
+            set { isDone = value; }
+        }
+
+        private bool isInQueue;
+
+        public bool IsInQueue
+        {
+            get { return isInQueue; }
+            set { isInQueue = value; }
+        }
+
+        private int remainingTime;
+
+        public int RemainingTime
+        {
+            get { return remainingTime; }
+            set { remainingTime = value; }
+        }
+
+        private int finishTime;
+
+        public int FinishTime
+        {
+            get { return finishTime; }
+            set { finishTime = value; }
+        }
+
+        public Process()
+        {
+            waitingTime = 0;
+            turnaroundTime = 0;
+            isDone = false;
+        }
+    }
+}
